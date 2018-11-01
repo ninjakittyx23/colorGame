@@ -8,6 +8,8 @@ var h1 = document.querySelector("h1");
 var resetButton = document.querySelector("#reset")
 var easyBtn = document.querySelector("#easyBtn")
 var hardBtn = document.querySelector("#hardBtn")
+var correctSound = document.querySelector("#correct-sound")
+var wrongSound = document.querySelector("#wrong-sound")
 
 easyBtn.addEventListener("click", function() {
     easyBtn.classList.add("selected");
@@ -68,9 +70,11 @@ for (var i = 0; i < squares.length; i++) {
             resetButton.textContent = "Play Again?"
             changeColors(clickedColor);
             h1.style.backgroundColor = clickedColor;
+            correctSound.play()
         } else {
             this.style.background = "#232323";
             messageDisplay.textContent = "Try again, Bud :(";
+            wrongSound.play()
         }
     });
 }
