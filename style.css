@@ -15,7 +15,7 @@ body {
 }
 
 #container {
-    margin: 0 auto;
+    margin: 20px auto;
     max-width: 600px;
 }
 
@@ -62,6 +62,7 @@ button {
     letter-spacing: 1px;
     font-size: inherit;
     transition: all 0.9s;
+    outline: none;
 }
 
 button:hover {
